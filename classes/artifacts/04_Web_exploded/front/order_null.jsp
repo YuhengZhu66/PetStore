@@ -18,9 +18,8 @@
 
 <body>
 	<jsp:include page="index_log-inCon.jsp" />
-	<!-- 网站头部 -->
 	<%@ include file="general_header.jsp"%>
-	<!-- //网站头部 -->
+
 	<div id="B11-mainbody" class="container B11-mainbody">
 		<div id="B11shop" class="B11shop common-home">
 			<div class="container_oc">
@@ -46,9 +45,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- 版权栏 -->
+
 	<%@ include file="general_footer.jsp"%>
-	<!-- //版权栏 -->
+
 </body>
 </html>
 

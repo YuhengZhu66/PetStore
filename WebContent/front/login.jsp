@@ -16,7 +16,7 @@
 <body>
 	<div id="B11-mainbody" class="container B11-mainbody">
 		<div class="row">
-			<!--主体内容-->
+			<!--body-->
 			<div id="B11-content" class="B11-content col-xs-12">
 				<div class="login-wrap" style="margin-bottom: 60px; margin-top: 50px">
 					<div style="max-width: 540px; margin: 0 auto;">
@@ -24,7 +24,7 @@
 					</div>
 					<div class="login">
 						<div class="page-header" style="pause: 0px;"> <h1 class="login_h1">Member login</h1> </div>
-						<!--会员登录表单-->
+						<!--Member Login Form-->
 						<form action="login_check.jsp" method="post" class="form-horizontal">
 							<fieldset>
 								<div class="form-group">
@@ -32,7 +32,7 @@
 										<label id="username-lbl" for="username" class="required">Account ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!--账户文本框-->
+										<!--Account text box-->
 										<input type="text" name="username" id="username" value="" size="38"
 											class="validate-username required" required="required" autofocus="">
 									</div>
@@ -42,7 +42,7 @@
 										<label id="password-lbl" for="password" class="required">Password ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!--密码文本框-->
+										<!--PasswordTextBox-->
 										<input type="password" name=PWD id="password" value=""
 											class="validate-password required" size="38" maxlength="99"
 											required="required" aria-required="true">
@@ -64,14 +64,7 @@
 </div>
 </div>
 </div>
-<!-- //主体内容 -->
 </div>
 </div>
-<script language="javascript">
-//刷新验证码
-function myReload() {
-document.getElementById("img_checkCode").src = document.getElementById("img_checkCode").src + "?nocache=" + new Date().getTime();
-}
-</script>
 </body>
 </html>

@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
-<%@ page import="java.sql.ResultSet"%><!-- 导入java.sql.ResultSet类 -->
-<%@ page import="java.util.Vector"%><!-- 导入Java的向量类 -->
-<%@ page import="java.text.DecimalFormat"%><!-- 导入格式化数字的类 -->
-<%@ page import="com.model.Goodelement"%><!-- 导入购物车图书的模型类 -->
-<!-- 创建com.tools.ConnDB类的对象 -->
+<%@ page import="java.sql.ResultSet"%>
+<%@ page import="java.util.Vector"%><
+<%@ page import="java.text.DecimalFormat"%>
+<%@ page import="com.model.Goodelement"%>
 <jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
 <%
-	String username = (String) session.getAttribute("username");//获取会员账号
-	//如果没有登录，将跳转到登录页面
+	String username = (String) session.getAttribute("username");
+	//If you have not logged in, the login page is displayed
 	if (username == "" || username == null) {
-		response.sendRedirect("login.jsp");//重定向页面到会员登录页面
-		return;//返回
+		response.sendRedirect("login.jsp");
+		return;
 	} else {
-		Vector cart = (Vector) session.getAttribute("cart");//获取购物车对象
-		if (cart == null || cart.size() == 0) {//如果购物车为空
-			response.sendRedirect("cart_null.jsp");//重定向页面到购物车为空页面
+		Vector cart = (Vector) session.getAttribute("cart");
+		if (cart == null || cart.size() == 0) {
+			response.sendRedirect("cart_null.jsp");
 		} else {
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,19 +27,19 @@
 
 <body>
 	<jsp:include page="index_log-inCon.jsp" />
-	<!-- 网站头部 -->
+
 	<%@ include file="general_header.jsp"%>
-	<!-- //网站头部 -->
+
 	<div id="B11-mainbody" class="container B11-mainbody">
 		<div class="row">
-			<!-- 页面主体内容 -->
+			<!-- body -->
 			<div id="B11-content" class="B11-content col-xs-12">
 				<div id="B11shop" class="B11shop common-home">
 					<div class="container_oc">
 						<div class="row">
 							<div id="content_oc" class="col-sm-12">
 								<h1>My shopping cart</h1>
-								<!-- 显示购物车中的图书 -->
+
 								<div class="table-responsive cart-info">
 									<table class="table table-bordered">
 										<thead>
@@ -53,31 +52,31 @@
 											</tr>
 										</thead>
 										<tbody>
-										<!-- 遍历购物车中的图书并显示 -->
+										<!-- Walk through the cart and display the pet goods-->
 											<%
 												float sum = 0;
-												DecimalFormat fnum = new DecimalFormat("##0.0");//定义显示金额的格式
-												int ID = -1;//保存图书ID的变量
-												String goodName = "";//保存书名称的变量
-												String picture = "";//保存图书图片的变量
-												//遍历购物车中的图书
+												DecimalFormat fnum = new DecimalFormat("##0.0");//Defines the format for displaying the amount
+												int ID = -1;//Save the pet ID variable
+												String goodName = "";//Holds a variable for the good name
+												String picture = "";
+												//Walk through the goods in the cart
 												for (int i = 0; i < cart.size(); i++) {
-													Goodelement gooditem = (Goodelement) cart.elementAt(i);//获取一个图书
-													sum = sum + gooditem.number * gooditem.nowprice;//计算总计金额
-													ID = gooditem.ID;//获取图书ID
+													Goodelement gooditem = (Goodelement) cart.elementAt(i);
+													sum = sum + gooditem.number * gooditem.nowprice;
+													ID = gooditem.ID;
 													if (ID > 0) {
 														ResultSet rs_good = conn.executeQuery("select * from tb_good where ID=" + ID);
 														if (rs_good.next()) {
-															goodName = rs_good.getString("goodName");//获取书名称
-															picture = rs_good.getString("picture");//获取图书图片
+															goodName = rs_good.getString("goodName");
+															picture = rs_good.getString("picture");
 														}
-														conn.close();//关闭数据库的连接
+														conn.close();
 													}
 											%>
-											<!-- 显示一条图书信息 -->
+											<!-- Displays a good message -->
 											<tr>
 												<td class="text-center image" width="20%"><a href="goodsDetail.jsp?ID=<%=gooditem.ID%>">
-													<img width="80px" src="../images/book/<%=picture%>"> </a></td>
+													<img width="80px" src="../images/goods/<%=picture%>"> </a></td>
 												<td class="text-left name"><a
 													href="goodsDetail.jsp?ID=<%=gooditem.ID%>"> <%=goodName%></a>
 												</td>
@@ -86,17 +85,16 @@
 												<td class="text-right total"><%=(gooditem.nowprice * gooditem.number)%>Yuan
 												</td>
 											</tr>
-											<!-- 显示一条图书信息 -->
+
 											<%
 												}
-												String sumString = fnum.format(sum);//格式化总计金额
+												String sumString = fnum.format(sum);//Formatted total amount
 											%>
-											<!-- //遍历购物车中的图书并显示 -->
+
 										</tbody>
 									</table>
 								</div>
-								<!-- //显示购物车中的图书 -->
-								<!-- 显示总计金额  -->
+
 								<div class="row cart-total">
 									<div class="col-sm-4 col-sm-offset-8">
 										<table class="table table-bordered">
@@ -111,15 +109,15 @@
 										</table>
 									</div>
 								</div>
-								<!-- //显示总计金额  -->
+
 							</div>
 						</div>
 
-						<!-- 填写物流信息 -->
+						<!-- logistics information -->
 						<div class="row">
 							<div id="content_oc" class="col-sm-12">
 								<h1>Logistics Information</h1>
-								<!-- 填写物流信息的表单 -->
+								<!-- table -->
 								<form action="cart_order.jsp" method="post" id="myform">
 									<div class="table-responsive cart-info">
 										<table class="table table-bordered">
@@ -160,12 +158,12 @@
 										</table>
 									</div>
 								</form>
-								<!-- //填写物流信息的表单 -->
+
 							</div>
 						</div>
-						<!-- //填写物流信息 -->
+
 						<br />
-						<!-- 显示支付方式 -->
+						<!-- PAY -->
 						<div class="row">
 							<div id="content_oc" class="col-sm-12">
 								<h1>Terms of Payment</h1>
@@ -192,47 +190,47 @@
 								</div>
 							</div>
 						</div>
-						<!-- //显示支付方式 -->
+
 					</div>
 				</div>
 			</div>
-			<!-- //页面主体内容 -->
+
 		</div>
 	</div>
-	<!-- 版权栏 -->
-	<%@ include file="general_footer.jsp"%>
-	<!-- //版权栏 -->
 
-	<!-- 使用jBox插件实现一个支付对话框 -->
+	<%@ include file="general_footer.jsp"%>
+
+
+	<!-- Implement a payment dialog -->
 	<script type="text/javascript" src="js/jBox/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/jBox/jquery.jBox-2.3.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="js/jBox/Skins2/Pink/jbox.css" />
 	<script type="text/javascript">
 		function zhifu() {
-			//验证收货人姓名
+			//Verify consignee name
 			if ($('#recevieName').val() === "") {
 				alert('The name of the consignee cannot be blank！');
 				return;
 			}
-			//验证收货人手机
+
 			if ($('#tel').val() === "") {
 				alert('Consignee\'s  phone number should not be empty！');
 				return;
 			}
-			//验证手机号是否合法
+
 			if (isNaN($('#tel').val())) {
 				alert("Please enter a number for your phone number!");
 				return;
 			}
-			//验证收货人地址
+
 			if ($('#address').val() === "") {
 				alert('The consignee address cannot be empty！');
 				return;
 			}
-			//设置对话框中要显示的内容
+			//Sets what to display
 			var html = '<div class="popup_cont">'
 					+ '<p>Scan QR code for payment</p>'
-					+ '<strong>￥<font id="show_money_info">0.01Yuan</font></strong>'
+					+ '<strong>￥ id="show_money_info">0.01Yuan</strong>'
 					+ '<div style="width: 256px; height: 250px; text-align: center; margin-left: auto; margin-right: auto;" >'
 					+ '<image src="images/QRcodetesting.png" width="256" height="256" /></div>'
 					+ '</div><p style="text-align:center"> The payment QR code is for testing purposes only </p>';
@@ -245,21 +243,21 @@
 					},
 					buttonsFocus : 0,
 					submit : function(v, h, f) {
-						if (v == 0) {//取消按钮的响应事件
-							return true; //关闭窗口
+						if (v == 0) {//cancel button
+							return true; //close
 						}
-						if (v == 1) {//支付按钮的响应事件
-							document.getElementById('myform').submit();//提交表单
+						if (v == 1) {//pay button
+							document.getElementById('myform').submit();//Submit Form
 							return true;
 						}
 						return false;
 					}
 				}
 			};
-			$.jBox.open(content, 'PAY', 400, 450);//打开支付窗口
+			$.jBox.open(content, 'PAY', 400, 450);//open PAY
 		}
 	</script>
-	<!-- // 使用jBox插件实现一个支付对话框 -->
+
 </body>
 </html>
 <%	}

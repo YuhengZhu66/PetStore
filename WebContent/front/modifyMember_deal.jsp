@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
-<%@ page import="java.sql.ResultSet"%><!-- 导入java.sql.ResultSet类 -->
-<!-- 创建com.tools.ConnDB类的对象 -->
+<%@ page import="java.sql.ResultSet"%>
 <jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
 <jsp:useBean id="ins_member" scope="page" class="com.dao.MemberDaoImpl"/>
 <jsp:useBean id="member" scope="request" class="com.model.Member">

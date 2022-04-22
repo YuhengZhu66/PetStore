@@ -572,7 +572,7 @@ margin: 0 0 20px;
 border-bottom: 0px solid #0885B1;
 text-align: center;
 }
-/*****登录页面的登录按钮样式*******/
+/*****The login button style for the login page*******/
 .login{
 	max-width: 540px; margin: 0 auto;padding:0px; border: 1px solid #eeeeee;
 }
@@ -877,233 +877,21 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
         display: none !important
     }
 }
-/****************************************************************************************/
-/***广告轮播应用的CSS 开始*****/
-.slideshow .nivoSlider .nivo-directionNav a {
-    width: 40px;
-    height: 76px;
-    background: url(../images/arrow-prev.png) no-repeat center center #030303;
-    top: 50%;
-    margin-top: -38px;
-    opacity: 0.5;
-    filter: alpha(opacity=50)
-}
 
-.slideshow .nivoSlider .nivo-directionNav a.nivo-nextNav {
-    background-image: url(../images/arrow-next.png)
-}
-.slideshow .nivo-directionNav a:hover {
-    background-color: #0885B1;
-    opacity: 5;
-    filter: alpha(opacity=100)
-}
-
-.nivo-controlNav {
-    display: none
-}
-.nivoSlider {
-    position: relative
-}
-
-.nivoSlider img {
-    left: 0;
-    position: absolute;
-    top: 0
-}
-
-.nivoSlider a.nivo-imageLink {
-    border: 0 none;
-    display: none;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 6
-}
-
-.nivo-slice {
-    display: block;
-    height: 100%;
-    position: absolute;
-    z-index: 5
-}
-
-.nivo-box {
-    display: block;
-    position: absolute;
-    z-index: 5
-}
-
-.nivo-caption {
-    background: none repeat scroll 0 0 #000;
-    bottom: 0;
-    color: #fff;
-    left: 0;
-    opacity: 0.8;
-    position: absolute;
-    width: 100%;
-    z-index: 8
-}
-
-.nivo-caption p {
-    margin: 0;
-    padding: 5px
-}
-
-.nivo-caption a {
-    display: inline !important
-}
-
-.nivo-html-caption {
-    display: none
-}
-
-.nivo-directionNav a {
-    cursor: pointer;
-    position: absolute;
-    top: 45%;
-    z-index: 9
-}
-
-.nivo-prevNav {
-    left: 0
-}
-
-.nivo-nextNav {
-    right: 0
-}
-
-.nivo-controlNav a {
-    cursor: pointer;
-    position: relative;
-    z-index: 9
-}
-
-.nivo-controlNav a.active {
-    font-weight: bold
-}
-
-.slideshow .nivoSlider {
-   
-    margin-bottom: 20px;
-    position: relative
-}
-
-
-.slideshow .nivoSlider img {
-    display: none;
-    left: 0;
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 100%;
-    left: 1px !important;
-    top: 1px !important
-}
-.slideshow .nivoSlider a {
-    border: 0 none;
-    display: block
-}
-
-.slideshow .nivo-controlNav {
-    bottom: 5px;
-    height: 22px;
-    position: absolute;
-    right: 10px;
-    text-align: center;
-    z-index: 99
-}
-
-.slideshow .nivo-controlNav a {
-
-    border: 0 none;
-    display: block;
-    float: left;
-    height: 22px;
-    margin-right: 3px;
-    text-indent: -9999px;
-    vertical-align: top;
-    width: 22px
-}
-
-.slideshow .nivo-controlNav a.active {
-    background-position: 0 -22px
-}
-
-.slideshow .nivo-directionNav a {
-    border: 0 none;
-    display: block;
-    height: 30px;
-    text-indent: -9999px;
-    width: 30px
-}
-
-.slideshow a.nivo-nextNav {
-    background-position: -30px 0;
-    right: 15px
-}
-
-.slideshow a.nivo-prevNav {
-    left: 15px
-}
-
-.slideshow .nivo-caption {
-    font-family: Helvetica, Arial, sans-serif;
-    text-shadow: none
-}
-
-.slideshow .nivo-caption a {
-    color: #efe9d1;
-    text-decoration: underline
-}
-.slideshow > div {
-    height: 345px !important;
-    width: 850px
-}
-/***广告轮播应用的CSS 结束*****/
-/********星级评分条 开始**************************/
-.rating .B11-stack {
-    height: 12px;
-    color: #F9AC20;
-    width: 12px
-}
-#tab-review .B11-stack {
-    color: #F9AC20;
-    font-size: 7px
-}
-.rating .B11-stack .B11-stack-2x {
-    font-size: 11px
-}
-.product-grid .rating .B11-stack-2x, .product-list .rating .B11-stack-2x {
-    font-size: 12px
-}
-
-.product-grid .rating .B11-stack, .product-list .rating .B11-stack {
-    width: 14px;
-    height: 14px;
-    line-height: 14px
-}
-.view-product .rating .B11-stack + a {
-    margin-left: 5px
-}
-/********星级评分条 结束**************************/
-/********宠物价格 开始**************************/
+/********Price**************************/
 .price-new {
     color: #f0141e;
     font-size: 14px;
     font-family: 'Roboto Slab', Georgia, Times, serif;
     font-weight: normal
 }
-/********宠物价格 结束**************************/
-/********设置图片宽度 开始**************************/
+/********Price**************************/
+/********var MaxWidthwidth**************************/
 .B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .image img {
     width: 90px
 }
 /***************************************************/
-/**设置热门宠物区域**/
+/**HOT**/
 .B11-module.highlight .module-ct {
     padding: 10px
 }
@@ -1126,12 +914,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     display: inline-block;
     border-bottom: 0
 }
-/** 背景色**/
+/** background color**/
 .B11-module.highlight {
     padding: 0;
     border: 1px solid #D9D9D9;
 }
-/*****************首页最新上架及打折宠物样式 开始**********************/
+/*****************Home page latest shelves and discount pet styles**********************/
 .product-grid .actions, .ja-product-grid .actions {
     display: block;
     position: relative
@@ -1176,40 +964,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     font-weight: normal;
     font-size: 14px
 }
-/***********页脚购物指南、扫二维码部分的样式*******************************/
-.foot a{
-    color: #484848;	
-}
-.foot a:HOVER{
-    color: #c8161d;	
-}
-dt{
-    font-size: 16px;
-    padding-top: 6px;
-    padding-bottom: 6px;
 
-}
-dd{
-    width:190px;
-    height:120px;
-    padding:0px;
-    margin: 0px;
-    text-align: left;
-    font-size: 14px;
-}
-dl dd img{
-    width: 100px;
-    height: 100px;
-    display: block;
-}
-.foot{
-    float: left;
-    color: #666;
-    width: 190px;
-    margin:0px;
-    padding:0px;
-}
-/******************************************/
 .product-grid > div:hover .name a, .product-grid .name a:hover, .product-grid .name a:focus, .product-grid .name a:active, .ja-product-grid > div:hover .name a, .ja-product-grid .name a:hover, .ja-product-grid .name a:focus, .ja-product-grid .name a:active {
     color: #f0141e
 }
@@ -1293,8 +1048,8 @@ dl dd img{
     font-family: 'Roboto Slab', Georgia, Times, serif;
     text-decoration:line-through;
 }
-/*****************首页最新上架及打折宠物样式 结束**********************/
-/**************************版权栏样式 开始************************/
+/*****************Home page latest shelves and discount pet styles**********************/
+/**************************Copyright bar style************************/
 .B11-footer {
     background: #c8161d;
     color: #eeeeee;
@@ -1313,7 +1068,7 @@ dl dd img{
     text-align:center;
     
 }
-/**********************************查看购物车页面的样式开始****************************/
+/**********************************View the style of the shopping cart page****************************/
 .B11shop .table-bordered td {
     vertical-align: middle !important
 }
@@ -1369,7 +1124,7 @@ dl dd img{
     margin-bottom: 20px;
 }
 
-/********************宠物列表页应用样式**********************************/
+/********************Pet list page applies styles**********************************/
 .B11shop_heading_h1 {
     font-family: 'Roboto', sans-serif !important;
     font-size: 15px !important;
@@ -2066,46 +1821,7 @@ html, body {
     margin-left: 3px;
     padding: 0 5px
 }
-/**********************左侧热门宠物*************************/
-.B11-mainbody {
-    padding-bottom: 40px;
-    padding-top: 40px;
-    position: relative;
-    z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important
-}
-.navbar-default .B11-megamenu .module .module-ct ul, .navbar-default .B11-megamenu .B11-module .module-ct ul {
-    margin: 0;
-    text-align: left;
-    border: 0
-}
-.B11-sidebar-left.B11-sidebar .B11-module {
-    margin-right: 15px;
-    border: 2px solid #E1DDDD;
-}
-.B11-sidebar-1 .B11-module .box-product > div:before, .B11-sidebar .B11-module .box-product > div:before, .B11-sidebar-1 .B11-module .box-product > div:after, .B11-sidebar .B11-module .box-product > div:after {
-    content: " ";
-    display: table
-}
-.B11-sidebar-1 .B11-module .box-product > div:after, .B11-sidebar .B11-module .box-product > div:after {
-    clear: both
-}
-.B11-sidebar-1 .B11-module .box-product > div .image, .B11-sidebar .B11-module .box-product > div .image {
-    float: left;
-    margin-right: 20px
-}
-.B11-sidebar-1 .B11-module .box-product > div, .B11-sidebar .B11-module .box-product > div {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px
-}
-.B11-content {
-    padding-left: 30px;
-    padding-right: 15px
-}
-/****************************************/
+
 .table-responsive {
     overflow-x: auto;
     min-height: 0.01%;
@@ -2156,7 +1872,7 @@ html, body {
     color: #aaa;
     margin-left: 10px
 }
-/***************登录页面样式*****************/
+/***************Login page Style*****************/
 .form-group {
 margin-bottom: 20px;
 font-size: 18px;
@@ -2184,19 +1900,19 @@ margin-right: -15px;
 .login_h1{
 	color: #333333;marging:0px;background-color: #F2F2F2;padding:15px;font-size:20px;font-weight: bold;
 }
-/**************注册页面样式*************************************/
+/**************Registration page Style*************************************/
 input.required{
 	float: left;
 }
 .star{
 	color:
 }
-/******************搜索栏用的样式************************/
+/******************search bar************************/
 .search_box{width:438px;height:48px;line-height:48px;border:2px solid #c8161d; float:right;margin-top:22px; margin-right:80px;position:relative;}
 .search_box_img{width:auto; position:absolute; right:0px; top:0px; background-color:#fff;  border-left:2px solid #c8161d;}
 .search_box_img:hover{ background-color:#f2f2f2;}
 .search_box_img a:active{background:#f2f2f2;}
-.top-nav-search-input{line-height:18px; margin-left:10px; float:left;  border:0px; overflow:hidden; outline:none; font-family:"黑体"; margin-top:1px;width:235px; height:43px;  
+.top-nav-search-input{line-height:18px; margin-left:10px; float:left;  border:0px; overflow:hidden; outline:none; font-family:"黑体"; margin-top:1px;width:235px; height:43px;
 
 padding:0px; }
 /***************************************************/
@@ -2209,10 +1925,4 @@ padding:0px; }
 .index_h3{
 	border-bottom: 1px solid #B3B3B3;
 	padding-bottom:9px;
-}
-.img_checkcode{
-	border-top: 1px solid #B3B3B3;
-	border-right: 1px solid #B3B3B3; 
-	border-bottom: 1px solid #B3B3B3; 
-	float: left;
 }

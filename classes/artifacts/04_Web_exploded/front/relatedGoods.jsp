@@ -34,7 +34,7 @@
 			<div class="actions">
 				<div class="image">
 					<a href="goodsDetail.jsp?ID=<%=relate_ID%>"><img
-						src="../images/book/<%=relate_picture%>"> </a>
+						src="../images/goods/<%=relate_picture%>"> </a>
 				</div>
 				<div class="button-group">
 					<div class="cart">

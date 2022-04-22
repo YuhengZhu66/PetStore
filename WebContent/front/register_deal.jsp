@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=GBK" import="java.sql.ResultSet"
 	pageEncoding="GBK"%>
-<!-- 创建ConnDB类的对象 -->	
 <jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
-<!-- 创建MemberDaoImpl类的对象 -->	
 <jsp:useBean id="ins_member" scope="page" class="com.dao.MemberDaoImpl" />
-<!-- 创建Member类的对象，并对Member类的所有属性进行赋值 -->	
 <jsp:useBean id="member" scope="request" class="com.model.Member">
 	<jsp:setProperty name="member" property="*" />
 </jsp:useBean>
@@ -16,17 +13,17 @@
 </head>
 <body>
 	<%
-		request.setCharacterEncoding("GBK");//设置请求的编码为GBK
-		String username = member.getUsername();//获取会员账号
+		request.setCharacterEncoding("GBK");//Set the request encoding to GBK
+		String username = member.getUsername();
 		ResultSet rs = conn.executeQuery("select * from tb_Member where username='" + username + "'");
-		if (rs.next()) {//如果结果集中有数据
+		if (rs.next()) {//If there is data in the result set
 			out.println("<script language='javascript'>alert('The account already exists. Please register again！');"
 					+ "window.location.href='register.jsp';</script>");
 		} else {
-			int ret = 0;//记录更新记录条数的变量
-			ret = ins_member.insert(member);//将填写的会员信息保存到数据库
+			int ret = 0;//Records the variable that updates the number of records
+			ret = ins_member.insert(member);//Save the membership information to the database
 			if (ret != 0) {
-				session.setAttribute("username", username);//将会员账号保存到Session中
+				session.setAttribute("username", username);//Save the member account to Session
 				out.println("<script language='javascript'>alert('Member registration successful！');"
 						+ "window.location.href='index.jsp';</script>");
 			} else {

@@ -46,43 +46,42 @@
 				String sql = "insert into tb_Order(gnumber,username,recevieName,address,tel,bz) values("
 						+ gnumber + ",'" + Username + "','" + recevieName + "','" + address + "','" + tel
 						+ "','" + bz + "')";
-				temp = conn.executeUpdate_id(sql);// 保存订单主表数据
-				if (temp == 0) {//如果返回的订单号为0，表示不合法
+				temp = conn.executeUpdate_id(sql);// Save the order master table data
+				if (temp == 0) {
 					flag = false;
 				} else {
-					orderID = temp;//把生成的订单号赋值给订单ID变量
+					orderID = temp;//Assign the generated order number to the order ID variable
 				}
-				String str = "";//保存插入订单详细信息的SQL语句
-				//插入订单明细表数据
+				String str = "";//Save the SQL statement to insert the order details
+				//Insert order list data
 				for (int i = 0; i < cart.size(); i++) {
-					Goodelement mygoodelement = (Goodelement) cart.elementAt(i);//获取购物车中的一个图书
-					ID = mygoodelement.ID;//获取图书ID
-					nowprice = mygoodelement.nowprice;//获取图书价格
-					number = mygoodelement.number;//获取图书数量
-					sum = nowprice * number;//计算图书金额
+					Goodelement mygoodelement = (Goodelement) cart.elementAt(i);//Get a pet in the shopping cart
+					ID = mygoodelement.ID;
+					nowprice = mygoodelement.nowprice;
+					number = mygoodelement.number;
+					sum = nowprice * number;
 					str = "insert into tb_order_Detail (orderID,goodID,price,number) values(" + orderID + ","
-							+ ID + "," + nowprice + "," + number + ")";//插入订单明细的SQL语句
-					temp = conn.executeUpdate(str);//保存订单明细
-					Totalsum = Totalsum + sum;//累加合计金额
-					if (temp == 0) {//如果返回值为0，表示不合法
+							+ ID + "," + nowprice + "," + number + ")";//SQL statement to insert order details
+					temp = conn.executeUpdate(str);//Save order details
+					Totalsum = Totalsum + sum;
+					if (temp == 0) {
 						flag = false;
 					}
 				}
 
-				if (!flag) {//如果订单无效
+				if (!flag) {//The order is invalid
 					out.println("<script language='javascript'>alert('The order is invalid');history.back();</script>");
 				} else {
-					session.removeAttribute("cart");//清空购物车
-					out.println("<script language='javascript'>alert('Order generation, please remember your order number[" + orderID
-							+ "]');window.location.href='index.jsp';</script>");//显示生成的订单号
+					session.removeAttribute("cart");//Empty Cart
+					out.println("<script language='javascript'>alert('Order generation');window.location.href='index.jsp';</script>");
 				}
-				conn.close();//关闭数据库连接
+				conn.close();
 			}
-		} catch (Exception e) {//处理异常
-			out.println(e.toString());//输出异常信息
+		} catch (Exception e) {
+			out.println(e.toString());
 		}
 	} else {
-		session.invalidate();//销毁Session
+		session.invalidate();
 		out.println(
 				"<script language='javascript'>alert('Please log in first before shopping!');window.location.href='index.jsp';</script>");
 	}

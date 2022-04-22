@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<!-- 主体内容 -->
+	<!-- main -->
 	<div id="B11-mainbody" class="container B11-mainbody">
 		<div class="row">
 			<div id="B11-content" class="B11-content col-xs-12">
@@ -32,7 +32,7 @@
 						<div class="page-header" style="pause: 0px;">
 							<h1 class="login_h1">member registration</h1>
 						</div>
-						<!-- 会员注册表单 -->
+						<!-- register -->
 						<form id="member-registration" action="register_deal.jsp"
 							onsubmit="return regis();" method="post" class="form-horizontal">
 
@@ -43,21 +43,23 @@
 											account ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 账户文本框 -->
+										<!-- Account text box -->
 										<input type="text" name="username" id="username" value=""
-											class="required" size="38" required><span class="star">&nbsp;*</span>
+											class="required" size="38" required
+											aria-required="true"><span class="star">&nbsp;*</span>
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-sm-4 control-label">
-										<label id="realname-lbl" for="realname" class="required">
+										<label id="password-lbl" for="password" class="required">
 											real name ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 输入真实姓名的文本框 -->
-										<input type="text" name="realname" id="jform_username"
+
+										<input type="text" name="truename" id="jform_username"
 											value="" class="validate-username required" size="38"
-											required><span class="star">&nbsp;*</span>
+											required="required" aria-required="true"><span
+											class="star">&nbsp;*</span>
 									</div>
 								</div>
 								<div class="form-group">
@@ -66,10 +68,11 @@
 											Password ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 密码文本框 -->
+
 										<input type="password" name="pwd" id="pwd" value=""
 											autocomplete="off" class="validate-password required"
-											size="38" maxlength="99" required><span class="star">&nbsp;*</span>
+											size="38" maxlength="99" required
+											aria-required="true"><span class="star">&nbsp;*</span>
 									</div>
 								</div>
 								<div class="form-group">
@@ -78,32 +81,33 @@
 											confirm password ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 确认密码文本框 -->
+
 										<input type="password" name="pwd2" id="pwd2" value=""
 											autocomplete="off" class="validate-password required"
-											size="38" maxlength="99" required><span class="star">&nbsp;*</span>
+											size="38" maxlength="99" required
+											aria-required="true"><span class="star">&nbsp;*</span>
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-sm-4 control-label">
-										<label id="password-lbl" for="password">
+										<label id="password-lbl" for="password" class="required">
 											contact number ：</label>
 									</div>
 									<div class="col-sm-8" style="clear: none;">
-										<!-- 输入联系电话的文本框 -->
+
 										<input type="text" name="tel" class="validate-email " id="tel"
-											value="" size="38">
+											value="" size="38" aria-required="true">
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-sm-4 control-label">
-										<label id="email-lbl" for="email">
+										<label id="password-lbl" for="password" class="required">
 											mailbox ：</label>
 									</div>
 									<div class="col-sm-8" style="clear: none;">
-										<!-- 输入邮箱的文本框 -->
+
 										<input type="email" name="email" class="validate-email"
-											id="jform_email2" value="" size="38">
+											id="jform_email2" value="" size="38" aria-required="true">
 									</div>
 								</div>
 								<div class="form-group">
@@ -128,23 +132,23 @@
 			</div>
 		</div>
 	</div>
-	<!-- //主体内容 -->
+
 </body>
-<!-- Verify if the entered registration information is valid -->
+<!-- Verify that the entered registration information is valid -->
 <script src="js/jquery.1.3.2.js" type="text/javascript"></script>
 <script>
 	function regis() {
-		/* ----------- Verify if the entered account is valid ------------------------- */
+		/* ----------- Verify that the entered account is valid ------------------------- */
 		if (/^[\u4e00-\u9fa5]+$/.test($('#username').val())) {
 			alert("The account cannot enter Chinese characters！");
 			return false;
 		}
-		/* ----------- Verify if the entered phone number is valid --------------------- */
+		/* ----------- tel --------------------- */
 		if (isNaN($('#tel').val())) {
 			alert("Contact number Please enter a number");
 			return false;
 		}
-		/* ----------- Verify if the entered passwords are consistent --------------------- */
+		/* ----------- pwd same--------------------- */
 		var pwd = document.getElementById("pwd").value;
 		var pwd2 = document.getElementById("pwd2").value;
 		if (pwd !== pwd2) {
@@ -154,5 +158,4 @@
 		return true;
 	}
 </script>
-<!-- //验证输入的信息是否合法 -->
 </html>

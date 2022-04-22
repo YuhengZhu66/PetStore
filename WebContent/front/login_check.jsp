@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
-<!-- 导入java.sql.ResultSet类 -->	
 <%@ page import="java.sql.ResultSet"%>
-<!-- 创建ConnDB类的对象 -->	
 <jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -12,19 +10,17 @@
 </head>
 <body>
 <%
-	String username = request.getParameter("username");//获取账户
-	String checkCode = request.getParameter("checkCode");//获取验证码
-	//if (checkCode.equals(session.getAttribute("randCheckCode").toString()))
+	String username = request.getParameter("username");
 	if(true){
-		try {//捕捉异常
+		try {
 			ResultSet rs = conn.executeQuery("select * from tb_Member where username='" 
 	                                              + username + "'");
-			if (rs.next()) {//如果找到相应的账号
-				String PWD = request.getParameter("PWD");//获取密码
-				if (PWD.equals(rs.getString("password"))) {//如果输入的密码和获取的密码一致
-	                   //把当前的账户保存到Session中，实现登录
+			if (rs.next()) {//If we find the corresponding account number
+				String PWD = request.getParameter("PWD");
+				if (PWD.equals(rs.getString("password"))) {
+	                   //Save the current account to Session for login
 					session.setAttribute("username", username); 
-					response.sendRedirect("index.jsp");//跳转到前台首页
+					response.sendRedirect("index.jsp");
 				} else {
 					out.println(
 			"<script language='javascript'>alert('The user name or password you entered is wrong!');"
@@ -35,12 +31,12 @@
 					"<script language='javascript'>alert('You entered the wrong username or password, or your account"+
 	                   "has been frozen!');window.location.href='login.jsp';</script>");
 			}
-		} catch (Exception e) {//处理异常
+		} catch (Exception e) {
 			out.println(
 					"<script language='javascript'>alert('Your operation is wrong!');"
 			        +"window.location.href='login.jsp';</script>");
 		}
-		conn.close();//关闭数据库连接
+		conn.close();
 	}
 %>
 </body>

@@ -1,17 +1,17 @@
 package com.model;
 
 public class Member {
-	private Integer ID = Integer.valueOf("-1"); // 会员ID属性
-	private String username = ""; 				// 账户属性
-	private String truename = ""; 				// 真实姓名属性
-	private String pwd = ""; 					// 密码属性
-	private String city = ""; 					// 所在城市属性
-	private String address = ""; 				// 地址属性
-	private String postcode = ""; 				// 邮编属性
-	private String cardno = ""; 				// 证件号码属性
-	private String cardtype = ""; 				// 证件类型属性
-	private String tel = ""; 					// 联系电话属性
-	private String email = ""; 					// 邮箱属性
+	private Integer ID = Integer.valueOf("-1");
+	private String username = "";
+	private String truename = "";
+	private String pwd = "";
+	private String city = "";
+	private String address = "";
+	private String postcode = "";
+	private String cardno = "";
+	private String cardtype = "";
+	private String tel = "";
+	private String email = "";
 	public Integer getID() {
 		return ID;
 	}
@@ -36,12 +36,9 @@ public class Member {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
+	public String getCity() {return city;}
+	public void setCity(String city) {this.city = city;}
+
 	public String getAddress() {
 		return address;
 	}

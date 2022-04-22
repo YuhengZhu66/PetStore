@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="toolbar-ct-1">
 				<p>
-					<i class="B11 B11-phone"></i> <span style="margin-right: 15px;">Telephone number£º400-1999-666</span><a
+					<i class="B11 B11-phone"></i> <span style="margin-right: 15px;">Telephone number£º666</span><a
 						href="login.jsp">Login</a>&nbsp; £ü &nbsp;<a href="register.jsp">Register</a>
 				</p>
 			</div>
@@ -25,24 +25,6 @@
 				<div class="toolbar-ct col-xs-12 col-md-6  hidden-sm hidden-xs">
 					<div class="toolbar-ct-1">
 						<img src="images/LOGO.png">
-					</div>
-					<div>
-						<!-- ËÑË÷Ìõ -->
-						<div class="search_box">
-							<div class="top-nav-search">
-								<form method="post" action="search_result.jsp">
-									<input type="text" name="searchword" size="38"
-										style="border: 0px;" class="top-nav-search-input"
-										placeholder="Please enter the content" /> <input type="image"
-										src="images/search.png" class="search_box_img"
-										onFocus="this.blur()" />
-								</form>
-							</div>
-						</div>
-						<!-- //ËÑË÷Ìõ -->
-
-
-
 					</div>
 				</div>
 
@@ -69,7 +51,7 @@
 		<div class="row">
 			<div class="toolbar-ct-1">
 				<p>
-					<i class="B11 B11-phone"></i> <span style="margin-right: 15px;">Telephone number£º400-1999-666</span>Hello£¬<%=username%>
+					<i class="B11 B11-phone"></i> <span style="margin-right: 15px;">Telephone number£º666</span>Hello£¬<%=username%>
 					&nbsp; &nbsp;<a href="modifyMember.jsp">modification</a>&nbsp;&nbsp;
 					|&nbsp;&nbsp;<a href="logout.jsp">Logout</a>
 				</p>
@@ -86,24 +68,6 @@
 				<div class="toolbar-ct col-xs-12 col-md-6  hidden-sm hidden-xs">
 					<div class="toolbar-ct-1">
 						<img src="images/LOGO.png">
-					</div>
-					<div>
-						<!-- ËÑË÷Ìõ -->
-						<div class="search_box">
-							<div class="top-nav-search">
-								<form method="post" action="search_result.jsp">
-									<input type="text" name="searchword" size="38"
-										style="border: 0px;" class="top-nav-search-input"
-										placeholder="Please enter the content" /> <input type="image"
-										src="images/search.png" class="search_box_img"
-										onFocus="this.blur()" />
-								</form>
-							</div>
-						</div>
-						<!-- //ËÑË÷Ìõ -->
-
-
-
 					</div>
 				</div>
 

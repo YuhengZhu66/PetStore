@@ -105,7 +105,7 @@
 													<div class="actions">
 														<div class="image">
 															<a style="width: 95%" href="goodsDetail.jsp?ID=<%=ID%> "><img
-																src="../images/book/<%=picture%>"
+																src="../images/goods/<%=picture%>"
 																class="img-responsive"> </a>
 														</div>
 														<div class="button-group btn-grid">

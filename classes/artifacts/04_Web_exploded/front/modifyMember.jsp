@@ -1,8 +1,7 @@
 <%@ page contentType="text/html; charset=GBK"%>
-<%@ page import="java.sql.ResultSet"%><%-- 导入java.sql.ResultSet类 --%>
-<%-- 创建com.tools.ConnDB类的对象 --%>
+<%@ page import="java.sql.ResultSet"%>
 <jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
-<jsp:useBean id="chStr" scope="page" class="com.tools.ChStr" /><%-- 创建ChStr类的对象 --%>
+<jsp:useBean id="chStr" scope="page" class="com.tools.ChStr" />
 <%
 	String username = (String) session.getAttribute("username");
 	if (username != null && username != "") {
@@ -53,9 +52,7 @@
 
 <body>
 	<jsp:include page="index_log-inCon.jsp" />
-	<!-- 网站头部 -->
 	<%@ include file="general_header.jsp"%>
-	<!-- //网站头部 -->
 
 	<div id="B11-mainbody" class="container B11-mainbody">
 		<div class="row">
@@ -65,7 +62,7 @@
 
 				<div class="registration col-sm-6 col-sm-offset-3">
 
-						<!-- 会员注册表单 -->
+						<!-- member registration -->
 					<form id="member-registration" action="modifyMember_deal.jsp"
 						onsubmit="return regis();" method="post"
 						class="form-horizontal">
@@ -78,7 +75,7 @@
 											Account ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 账户文本框 -->
+										<!-- Account text box -->
 										<input type="text" name="username" id="username"
 									value="<%=username%>" class="required" size="38"
 									aria-required="true"><span class="star">&nbsp;*</span>
@@ -90,7 +87,7 @@
 											Real Name ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 输入真实姓名的文本框 -->
+
 										<input type="text" name="truename" id="jform_username"
 									value="<%=truename%>" class="validate-username required"
 									size="38" aria-required="true"><span
@@ -103,7 +100,7 @@
 											Original Password ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 密码文本框 -->
+
 										<input type="password" name="pwd" id="pwd" value=""
 									autocomplete="off" class="validate-password required" size="38"
 									maxlength="99" required="required" aria-required="true"><span class="star">&nbsp;*</span>
@@ -117,7 +114,7 @@
 											New Password ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 密码文本框 -->
+
 										<input type="password" name="newPwd" id="newPwd" value=""
 									autocomplete="off" class="validate-password required" size="38"
 									maxlength="99" aria-required="true"><span class="star">&nbsp;*</span>
@@ -129,7 +126,7 @@
 											Check Password ：</label>
 									</div>
 									<div class="col-sm-8">
-										<!-- 确认密码文本框 -->
+
 										<input type="password" name="newPwd2" id="newPwd2"
 									class="validate-password required" value="" size="38"
 									aria-required="true"><span class="star">*</span>
@@ -141,7 +138,7 @@
 											Phone Number ：</label>
 									</div>
 									<div class="col-sm-8" style="clear: none;">
-										<!-- 输入联系电话的文本框 -->
+
 										<input type="text" name="tel" class="validate-email " id="tel"
 									value="<%=tel%>" size="38" autocomplete="email" aria-required="true">
 									</div>
@@ -152,7 +149,7 @@
 											Email ：</label>
 									</div>
 									<div class="col-sm-8" style="clear: none;">
-										<!-- 输入邮箱的文本框 -->
+
 										<input type="email" name="email" class="validate-email"
 									id="jform_email2" value="<%=email%>" size="38"
 									aria-required="true">
@@ -174,9 +171,9 @@
 
 		</div>
 	</div>
-	<!-- 版权栏 -->
+
 	<%@ include file="general_footer.jsp"%>
-	<!-- //版权栏 -->
+
 </body>
 <script src="js/jquery.1.3.2.js" type="text/javascript"></script>
 <script>

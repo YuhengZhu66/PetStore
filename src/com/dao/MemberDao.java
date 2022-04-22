@@ -5,9 +5,9 @@ import java.util.List;	//导入List类
 import com.model.Member;//导入会员模型类
 
 public interface MemberDao {
-	public int insert(Member m);// 保存会员信息
+	public int insert(Member m);// Save member information
 
-	public List select(); // 查询会员信息
+	public List select(); // Querying
 
 	public int update(Member m);
 

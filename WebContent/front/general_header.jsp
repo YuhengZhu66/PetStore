@@ -3,8 +3,8 @@
 <header id="B11-header" class="wrap B11-header">
 	<div class="container">
 		<div class="row">
-			<!-- //网站Logo -->
-			<!-- 主导航条 -->
+			<!-- //Logo -->
+			<!-- Article the main navigation -->
 			<nav id="B11-mainnav"
 				class="col-xs-12 col-md-6 B11-mainnav navbar navbar-default">
 				<div class="B11-navbar navbar-collapse collapse">
@@ -14,27 +14,27 @@
 							<li itemprop="name" data-id="435" data-level="1"><a
 								id="index" itemprop="url" class="" href="index.jsp"
 								data-target="#">
-<%--								首页 --%>
+<%--								homepage --%>
 								<img src="./images/type_1.png" style="width: 25px; height: 25px">
 							</a></li>
 							<li itemprop="name" data-id="510" data-level="1"><a
                                     id="a" itemprop="url" class=""
                                     href="goodsList.jsp?type=14" data-target="#">
-<%--								经营类--%>
+<%--								a--%>
 								<img src="./images/type_2.png" style="width: 25px; height: 25px">
 							</a></li>
 
 							<li itemprop="name" data-id="510" data-level="1"><a
 								id="b" itemprop="url" class="" href="goodsList.jsp?type=15"
 								data-target="#">
-<%--									程序设计类--%>
+<%--									b--%>
 								<img src="./images/type_3.png" style="width: 25px; height: 25px">
 							</a></li>
 
 							<li itemprop="name" data-id="510" data-level="1"><a
 								id="c" itemprop="url" class="" href="goodsList.jsp?type=16"
 								data-target="#">
-<%--								教育类--%>
+<%--								c--%>
 								<img src="./images/type_4.png" style="width: 35px; height: 25px">
 							</a></li>
 						</ul>
@@ -42,17 +42,16 @@
 
 				</div>
 			</nav>
-			<!-- //主导航条 -->
 		</div>
 	</div>
 </header>
 <script>
-	// 获取页面参数
+	// Get page parameters
 	function GetString(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");//正则表达式
-		var r = window.location.search.substr(1).match(reg);//获取鼠标点击区域
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");//regular expression
+		var r = window.location.search.substr(1).match(reg);//Gets the mouse click area
 		if (r != null)
-			return unescape(r[2]);//返回区域编号
+			return (r[2]);//Return area number
 		return null;
 	}
 	var type = GetString('type');
@@ -71,12 +70,8 @@
 		c.style.backgroundColor = "#8c0f14";
 
 	}
-	if (type === '17') {
-		var shenghuo = document.getElementById('shenghuo');
-		shenghuo.style.backgroundColor = "#8c0f14";
 
-	}
-	if (type == null) {//默认登录无点击
+	if (type == null) {//By default, there is no click for login
 		var index = document.getElementById('index');
 		index.style.backgroundColor = "#8c0f14";
 

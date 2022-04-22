@@ -1,11 +1,11 @@
 package com.dao;
 
-import com.model.Book;
+import com.model.Goods;
 
-public interface GoodDao {//设定事物接口信息
-	public int insert(Book g);//定义insert的方法，处理完毕后返回数据类型，传入参数为Book对象，g为别名
+public interface GoodDao {
+	public int insert(Goods g);// Define an insert method that returns the data type as good and g as an alias
 
-	public int update(Book g);//定义update的方法，处理完毕后返回数据类型，传入参数为Book对象，g为别名
+	public int update(Goods g);
 
-	public int delete(Book g);//定义delete的方法，处理完毕后返回数据类型，传入参数为Book对象，g为别名
+	public int delete(Goods g);
 }

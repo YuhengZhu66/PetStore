@@ -49,7 +49,7 @@
 									<div>
 										<div class="image">
 											<a href="goodsDetail.jsp?ID=<%=hot_ID%>"><img
-												src="../images/book/<%=hot_picture%>" width="80px">
+												src="../images/goods/<%=hot_picture%>" width="80px">
 											</a>
 										</div>
 										<div class="name">

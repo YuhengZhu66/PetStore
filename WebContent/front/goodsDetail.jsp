@@ -60,7 +60,7 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-4 col-sm-4">
 										<ul class="thumbnails" style="list-style: none">
-											<li><a class="thumbnail" href="#"> <img src="../images/book/<%=picture%>"></a></li>
+											<li><a class="thumbnail" href="#"> <img src="../images/goods/<%=picture%>"></a></li>
 										</ul>
 									</div>
 									<div class="col-xs-12 col-md-8 col-sm-8">

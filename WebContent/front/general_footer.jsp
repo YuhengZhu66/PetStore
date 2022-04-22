@@ -4,7 +4,7 @@
 	<section class="B11-copyright">
 		<div class="container">
 			<div style="width:auto; height:auto; margin:auto;">
-				<small> <a href="../manage/Login_M.jsp">back-stage management system</a> | CPT202 Group B-11 Assignment 1
+				<small> CPT202 Group B-11 Assignment 1
 				</small>
 			</div>
 		</div>
