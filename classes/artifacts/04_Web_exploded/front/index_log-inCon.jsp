@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=GBK"%>
-<jsp:useBean id="chStr" scope="page" class="com.tools.ChStr" />
+<jsp:useBean id="chStr" scope="page" class="com.example.shop.tools.ChStr" />
 <%
 	String username = (String) session.getAttribute("username");
 
@@ -26,6 +26,19 @@
 					<div class="toolbar-ct-1">
 						<img src="images/LOGO.png">
 					</div>
+
+					<div class="search_box">
+						<div class="top-nav-search">
+							<form method="post" action="search_result.jsp">
+								<input type="text" name="searchword" size="38"
+									   style="border: 0px;" class="top-nav-search-input"
+									   placeholder="Please enter the content" /> <input type="image"
+																						src="images/search.png" class="search_box_img"
+																						onFocus="this.blur()" />
+							</form>
+						</div>
+					</div>
+
 				</div>
 
 				<div class="toolbar-ct toolbar-ct-right col-xs-12 col-md-3">
@@ -53,7 +66,7 @@
 				<p>
 					<i class="B11 B11-phone"></i> <span style="margin-right: 15px;">Telephone number£º666</span>Hello£¬<%=username%>
 					&nbsp; &nbsp;<a href="modifyMember.jsp">modification</a>&nbsp;&nbsp;
-					|&nbsp;&nbsp;<a href="logout.jsp">Logout</a>
+					|&nbsp;&nbsp;<a href="${pageContext.request.contextPath}/user/logout.action">Logout</a>
 				</p>
 			</div>
 			<div class="toolbar-ct-2">

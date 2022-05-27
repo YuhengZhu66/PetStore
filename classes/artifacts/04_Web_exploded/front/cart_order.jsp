@@ -73,7 +73,8 @@
 					out.println("<script language='javascript'>alert('The order is invalid');history.back();</script>");
 				} else {
 					session.removeAttribute("cart");//Empty Cart
-					out.println("<script language='javascript'>alert('Order generation');window.location.href='index.jsp';</script>");
+					out.println("<script language='javascript'>alert('Order generation, please remember your order number[" + orderID
+							+ "]');window.location.href='index.jsp';</script>");
 				}
 				conn.close();
 			}

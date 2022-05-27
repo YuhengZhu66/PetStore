@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <!-- 使用基于注解的控制器，spring会自动扫描base-package下的子包和类，如果扫描到会把这些类注册为bean-->
+    <context:component-scan base-package="com.example.shop"/>
+
+    <!--
+        location:指location指定的目录不要拦截，直接请求，这里指在根目录下的resources文件下的所有文件
+        mapping:值在resources文件下的所有文件(**代表所有文件)
+        不拦截静态文件
+    -->
+    <mvc:annotation-driven /> <!--加载注解驱动-->
+    <mvc:resources mapping="/front/**" location="/front/" />
+    <mvc:resources mapping="/images/**" location="/images/" />
+
+    <!-- 配置视图解析器，经过视图解析器后，视图的的完成路径为[prefix]+返回的视图字符串+[suffix] -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--        <property name="prefix" value="/WEB-INF/jsp/"/>-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+</beans>

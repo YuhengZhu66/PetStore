@@ -3,8 +3,8 @@
 <%@ page import="java.sql.ResultSet"%>
 <%@ page import="java.util.Vector"%><
 <%@ page import="java.text.DecimalFormat"%>
-<%@ page import="com.model.Goodelement"%>
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
+<%@ page import="com.example.shop.model.Goodelement"%>
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
 <%
 	String username = (String) session.getAttribute("username");
 	//If you have not logged in, the login page is displayed
@@ -23,6 +23,7 @@
 <meta http-equiv="content-type" content="text/html; charset=GBK">
 <title>My shopping cart-Online Pet Shop</title>
 <link rel="stylesheet" href="css/B11-01.css" type="text/css">
+	<script type="text/javascript" src="${pageContext.request.contextPath}/front/js/jquery.1.3.2.js"></script>
 </head>
 
 <body>
@@ -118,7 +119,7 @@
 							<div id="content_oc" class="col-sm-12">
 								<h1>Logistics Information</h1>
 								<!-- table -->
-								<form action="cart_order.jsp" method="post" id="myform">
+								<form action="${pageContext.request.contextPath}/shopcart/order.action" method="post" id="myform">
 									<div class="table-responsive cart-info">
 										<table class="table table-bordered">
 											<tbody>
@@ -182,7 +183,7 @@
 										<a href="index.jsp" class="btn btn-primary btn-default">Continue Shopping</a>
 									</div>
 									<div class="pull-left">
-										<a href="cart_clear.jsp" class="btn btn-primary btn-default">Empty Shopping Cart</a>
+										<a href="${pageContext.request.contextPath}/shopcart/clear.action" class="btn btn-primary btn-default">Empty Shopping Cart</a>
 									</div>
 									<div class="pull-right">
 										<a href="javascript:zhifu();" class="tigger btn btn-primary btn-primary">Settle accounts</a>

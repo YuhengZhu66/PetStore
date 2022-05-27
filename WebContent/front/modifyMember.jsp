@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=GBK"%>
 <%@ page import="java.sql.ResultSet"%>
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
-<jsp:useBean id="chStr" scope="page" class="com.tools.ChStr" />
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
+<jsp:useBean id="chStr" scope="page" class="com.example.shop.tools.ChStr" />
 <%
 	String username = (String) session.getAttribute("username");
 	if (username != null && username != "") {
@@ -63,7 +63,7 @@
 				<div class="registration col-sm-6 col-sm-offset-3">
 
 						<!-- member registration -->
-					<form id="member-registration" action="modifyMember_deal.jsp"
+					<form id="member-registration" action="${pageContext.request.contextPath}/user/modify.action"
 						onsubmit="return regis();" method="post"
 						class="form-horizontal">
 

@@ -358,7 +358,7 @@ pre {
     .col-sm-12 {
         width: 100%;
     }
-     .col-sm-8 {
+    .col-sm-8 {
         width: 66.66666667%
     }
     .col-sm-6 {
@@ -376,10 +376,10 @@ pre {
     .col-sm-offset-8 {
         margin-left: 66.66666667%
     }
-        .col-sm-offset-3 {
+    .col-sm-offset-3 {
         margin-left: 25%
     }
-    
+
 }
 
 @media (min-width: 920px) {
@@ -402,7 +402,7 @@ pre {
         width: 33.33333333%
     }
     .col-md-3 {
-        width: 25%
+        width: 22%
     }
     .col-md-pull-9 {
         right: 75%
@@ -566,15 +566,15 @@ input[type="search"] {
     border-color: #a30a11
 }
 .page-header {
-padding-bottom: 9px;
-padding-top:-9px;
-margin: 0 0 20px;
-border-bottom: 0px solid #0885B1;
-text-align: center;
+    padding-bottom: 9px;
+    padding-top:-9px;
+    margin: 0 0 20px;
+    border-bottom: 0px solid #0885B1;
+    text-align: center;
 }
-/*****The login button style for the login page*******/
+/*****登录页面的登录按钮样式*******/
 .login{
-	max-width: 540px; margin: 0 auto;padding:0px; border: 1px solid #eeeeee;
+    max-width: 540px; margin: 0 auto;padding:0px; border: 1px solid #eeeeee;
 }
 .btn-primary.login {
     width: 261px;
@@ -582,7 +582,7 @@ text-align: center;
     text-decoration: 120%;
     margin-left:190px;
     min-height:43px;
-    
+
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     color: #ffffff;
@@ -774,7 +774,7 @@ select, select.form-control, select.inputbox, select.input {
         border-top: 0;
         box-shadow: none
     }
-    
+
     .navbar-collapse.collapse {
         display: block !important;
         height: auto !important;
@@ -796,7 +796,7 @@ select, select.form-control, select.inputbox, select.input {
         float: left;
         margin: 0
     }
-    
+
     .navbar-nav > li {
         float: left
     }
@@ -877,22 +877,234 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
         display: none !important
     }
 }
+/****************************************************************************************/
+/***广告轮播应用的CSS 开始*****/
+.slideshow .nivoSlider .nivo-directionNav a {
+    width: 40px;
+    height: 76px;
+    background: url(../images/arrow-prev.png) no-repeat center center #030303;
+    top: 50%;
+    margin-top: -38px;
+    opacity: 0.5;
+    filter: alpha(opacity=50)
+}
 
-/********Price**************************/
+.slideshow .nivoSlider .nivo-directionNav a.nivo-nextNav {
+    background-image: url(../images/arrow-next.png)
+}
+.slideshow .nivo-directionNav a:hover {
+    background-color: #0885B1;
+    opacity: 5;
+    filter: alpha(opacity=100)
+}
+
+.nivo-controlNav {
+    display: none
+}
+.nivoSlider {
+    position: relative
+}
+
+.nivoSlider img {
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+.nivoSlider a.nivo-imageLink {
+    border: 0 none;
+    display: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 6
+}
+
+.nivo-slice {
+    display: block;
+    height: 100%;
+    position: absolute;
+    z-index: 5
+}
+
+.nivo-box {
+    display: block;
+    position: absolute;
+    z-index: 5
+}
+
+.nivo-caption {
+    background: none repeat scroll 0 0 #000;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    z-index: 8
+}
+
+.nivo-caption p {
+    margin: 0;
+    padding: 5px
+}
+
+.nivo-caption a {
+    display: inline !important
+}
+
+.nivo-html-caption {
+    display: none
+}
+
+.nivo-directionNav a {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    z-index: 9
+}
+
+.nivo-prevNav {
+    left: 0
+}
+
+.nivo-nextNav {
+    right: 0
+}
+
+.nivo-controlNav a {
+    cursor: pointer;
+    position: relative;
+    z-index: 9
+}
+
+.nivo-controlNav a.active {
+    font-weight: bold
+}
+
+.slideshow .nivoSlider {
+
+    margin-bottom: 20px;
+    position: relative
+}
+
+
+.slideshow .nivoSlider img {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0；
+    display: block;
+    width: 100%;
+    left: 1px !important;
+    top: 1px !important
+}
+.slideshow .nivoSlider a {
+    border: 0 none;
+    display: block
+}
+
+.slideshow .nivo-controlNav {
+    bottom: 5px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    z-index: 99
+}
+
+.slideshow .nivo-controlNav a {
+
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 22px;
+    margin-right: 3px;
+    text-indent: -9999px;
+    vertical-align: top;
+    width: 22px
+}
+
+.slideshow .nivo-controlNav a.active {
+    background-position: 0 -22px
+}
+
+.slideshow .nivo-directionNav a {
+    border: 0 none;
+    display: block;
+    height: 30px;
+    text-indent: -9999px;
+    width: 30px
+}
+
+.slideshow a.nivo-nextNav {
+    background-position: -30px 0;
+    right: 15px
+}
+
+.slideshow a.nivo-prevNav {
+    left: 15px
+}
+
+.slideshow .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+    text-shadow: none
+}
+
+.slideshow .nivo-caption a {
+    color: #efe9d1;
+    text-decoration: underline
+}
+.slideshow > div {
+    height: 345px !important;
+    width: 850px
+}
+/***广告轮播应用的CSS 结束*****/
+/********星级评分条 开始**************************/
+.rating .fa-stack {
+    height: 12px;
+    color: #F9AC20;
+    width: 12px
+}
+#tab-review .fa-stack {
+    color: #F9AC20;
+    font-size: 7px
+}
+.rating .fa-stack .fa-stack-2x {
+    font-size: 11px
+}
+.product-grid .rating .fa-stack-2x, .product-list .rating .fa-stack-2x {
+    font-size: 12px
+}
+
+.product-grid .rating .fa-stack, .product-list .rating .fa-stack {
+    width: 14px;
+    height: 14px;
+    line-height: 14px
+}
+.view-product .rating .fa-stack + a {
+    margin-left: 5px
+}
+/********星级评分条 结束**************************/
+/********宠物价格 开始**************************/
 .price-new {
     color: #f0141e;
     font-size: 14px;
     font-family: 'Roboto Slab', Georgia, Times, serif;
     font-weight: normal
 }
-/********Price**************************/
-/********var MaxWidthwidth**************************/
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .image img {
+/********宠物价格 结束**************************/
+/********设置图片宽度 开始**************************/
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .image img {
     width: 90px
 }
 /***************************************************/
-/**HOT**/
-.B11-module.highlight .module-ct {
+/**设置热门宠物区域**/
+.mr-module.highlight .module-ct {
     padding: 10px
 }
 
@@ -905,7 +1117,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase
 }
-.B11-module.highlight .module-title {
+.mr-module.highlight .module-title {
     background: #F2F2F2;
     color: #333333;
     margin: 0px;
@@ -914,12 +1126,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     display: inline-block;
     border-bottom: 0
 }
-/** background color**/
-.B11-module.highlight {
+/** 背景色**/
+.mr-module.highlight {
     padding: 0;
     border: 1px solid #D9D9D9;
 }
-/*****************Home page latest shelves and discount pet styles**********************/
+/*****************首页最新上架及打折宠物样式 开始**********************/
 .product-grid .actions, .ja-product-grid .actions {
     display: block;
     position: relative
@@ -964,7 +1176,40 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     font-weight: normal;
     font-size: 14px
 }
+/***********页脚购物指南、扫二维码部分的样式*******************************/
+.foot a{
+    color: #484848;
+}
+.foot a:HOVER{
+    color: #c8161d;
+}
+dt{
+    font-size: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 
+}
+dd{
+    width:190px;
+    height:120px;
+    padding:0px;
+    margin: 0px;
+    text-align: left;
+    font-size: 14px;
+}
+dl dd img{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.foot{
+    float: left;
+    color: #666;
+    width: 190px;
+    margin:0px;
+    padding:0px;
+}
+/******************************************/
 .product-grid > div:hover .name a, .product-grid .name a:hover, .product-grid .name a:focus, .product-grid .name a:active, .ja-product-grid > div:hover .name a, .ja-product-grid .name a:hover, .ja-product-grid .name a:focus, .ja-product-grid .name a:active {
     color: #f0141e
 }
@@ -1024,11 +1269,11 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     margin-bottom: 5px
 }
 
-.product-grid .rating .B11-stack-2x, .product-list .rating .B11-stack-2x {
+.product-grid .rating .fa-stack-2x, .product-list .rating .fa-stack-2x {
     font-size: 12px
 }
 
-.product-grid .rating .B11-stack, .product-list .rating .B11-stack {
+.product-grid .rating .fa-stack, .product-list .rating .fa-stack {
     width: 14px;
     height: 14px;
     line-height: 14px
@@ -1043,42 +1288,42 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     font-weight: normal
 }
 .product-grid .oldprice{
-	color: #AAAAAA;
+    color: #AAAAAA;
     font-size: 12px;
     font-family: 'Roboto Slab', Georgia, Times, serif;
     text-decoration:line-through;
 }
-/*****************Home page latest shelves and discount pet styles**********************/
-/**************************Copyright bar style************************/
-.B11-footer {
+/*****************首页最新上架及打折宠物样式 结束**********************/
+/**************************版权栏样式 开始************************/
+.mr-footer {
     background: #c8161d;
     color: #eeeeee;
     margin-top: 10px;
 }
-.B11-footer a {
+.mr-footer a {
     color: #FFFFFF
 }
 
-.B11-footer a:hover, .B11-footer a:active, .B11-footer a:focus {
+.mr-footer a:hover, .mr-footer a:active, .mr-footer a:focus {
     color: #d5d5d5;
 }
-.B11-copyright {
+.mr-copyright {
     font-size: 12px;
     padding: 20px 0 20px;
     text-align:center;
-    
+
 }
-/**********************************View the style of the shopping cart page****************************/
-.B11shop .table-bordered td {
+/**********************************查看购物车页面的样式开始****************************/
+.mrshop .table-bordered td {
     vertical-align: middle !important
 }
 
-.B11shop .table-bordered thead td {
+.mrshop .table-bordered thead td {
     background-color: #f7f7f7;
     padding: 10px 20px
 }
 
-.B11shop .table-bordered tbody td {
+.mrshop .table-bordered tbody td {
     padding: 10px 20px
 }
 #content_oc > h1 {
@@ -1124,8 +1369,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     margin-bottom: 20px;
 }
 
-/********************Pet list page applies styles**********************************/
-.B11shop_heading_h1 {
+/********************宠物列表页应用样式**********************************/
+.mrshop_heading_h1 {
     font-family: 'Roboto', sans-serif !important;
     font-size: 15px !important;
     color: #000 !important;
@@ -1136,21 +1381,21 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     padding: 0 !important
 }
 .product-grid .cart .btn, .ja-product-grid .cart .btn, .product-list .cart .btn {
-height: 40px;
-width: 40px !important;
+    height: 40px;
+    width: 40px !important;
 }
 .cart button {
-display: inline-block !important;
+    display: inline-block !important;
 }
 .product-grid .wishlist, .ja-product-grid .wishlist, .product-list .wishlist {
     right: 40px;
     margin-right:13px;
 }
 .box-content .cart{
-	margin-right:13px;
+    margin-right:13px;
 }
 .box-content1 .wishlist{
-	margin-right:-5px;
+    margin-right:-5px;
 }
 /***************************************************/
 .pull-right {
@@ -1208,7 +1453,7 @@ p {
     margin: 0 0 10px
 }
 small {
-font-size: 85%;
+    font-size: 85%;
     margin:auto;
     width:auto;
 }
@@ -1365,18 +1610,18 @@ select, select.form-control, select.inputbox, select.input {
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7
 }
-.B11-mainnav {
+.mr-mainnav {
     border-left: 0;
     border-right: 0;
     border-radius: 0
 }
 
-.B11-mainnav .B11-navbar {
+.mr-mainnav .mr-navbar {
     padding-left: 0;
     padding-right: 0
 }
 
-.B11-module {
+.mr-module {
     background: transparent;
     color: inherit;
     margin-bottom: 30px
@@ -1394,63 +1639,63 @@ select, select.form-control, select.inputbox, select.input {
 .module-ct:after {
     clear: both
 }
-.B11-spotlight-1 .B11-module {
+.mr-spotlight-1 .mr-module {
     margin-bottom: 0
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product {
+.mr-spotlight-1 .mr-module.highlight .box-product {
     margin: 0 -5px;
     width: auto
 }
-.B11-spotlight-1 .B11-module.highlight .box-product > div {
+.mr-spotlight-1 .mr-module.highlight .box-product > div {
     margin: 0;
     float: left;
     width: 33.3%;
     padding: 0 5px
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div .name, .B11-spotlight-1 .B11-module.highlight .box-product > div .price, .B11-spotlight-1 .B11-module.highlight .box-product > div .cart, .B11-spotlight-1 .B11-module.highlight .box-product > div .rating {
+.mr-spotlight-1 .mr-module.highlight .box-product > div .name, .mr-spotlight-1 .mr-module.highlight .box-product > div .price, .mr-spotlight-1 .mr-module.highlight .box-product > div .cart, .mr-spotlight-1 .mr-module.highlight .box-product > div .rating {
     display: none
 }
-.B11-spotlight-1 .B11-module.highlight .box-product > div .image img {
+.mr-spotlight-1 .mr-module.highlight .box-product > div .image img {
     padding: 0;
     border: 0;
     max-width: 100%
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child {
     float: none;
     width: 100%;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child:before, .B11-spotlight-1 .B11-module.highlight .box-product > div:first-child:after {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child:before, .mr-spotlight-1 .mr-module.highlight .box-product > div:first-child:after {
     content: " ";
     display: table
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child:after {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child:after {
     clear: both
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .name a {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .name a {
     color: #000000;
     font-family: 'Roboto Slab', Georgia, Times, serif
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .name a:hover, .B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .name a:focus, .B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .name a:active {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .name a:hover, .mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .name a:focus, .mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .name a:active {
     color: #f0141e
 }
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .image {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .image {
     float: left;
     margin-right: 20px
 }
 
 
 
-.B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .name, .B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .price, .B11-spotlight-1 .B11-module.highlight .box-product > div:first-child .rating {
+.mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .name, .mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .price, .mr-spotlight-1 .mr-module.highlight .box-product > div:first-child .rating {
     display: block
 }
 
@@ -1478,18 +1723,18 @@ img {
     margin: -10px 0
 }
 #toolbar a{
-	color: #808080;
+    color: #808080;
 }
 #toolbar a:HOVER{
-	color: #0885B1;
+    color: #0885B1;
 }
 #toolbar .toolbar-ct-1 {
-	float:left;
+    float:left;
     text-align: left;
     margin: 10px 0
 }
 
-#toolbar .toolbar-ct-1 .module, #toolbar .toolbar-ct-1 .B11-module {
+#toolbar .toolbar-ct-1 .module, #toolbar .toolbar-ct-1 .mr-module {
     margin-bottom: 0;
     display: inline-block !important;
     padding: 10px 20px 10px 0;
@@ -1498,18 +1743,18 @@ img {
 }
 
 @media (max-width: 768px) {
-    #toolbar .toolbar-ct-1 .module, #toolbar .toolbar-ct-1 .B11-module {
+    #toolbar .toolbar-ct-1 .module, #toolbar .toolbar-ct-1 .mr-module {
         padding-right: 0;
         border: 0
     }
 }
 
-#toolbar .toolbar-ct-1 .module i, #toolbar .toolbar-ct-1 .B11-module i {
+#toolbar .toolbar-ct-1 .module i, #toolbar .toolbar-ct-1 .mr-module i {
     margin-right: 5px;
     display: inline-block
 }
 
-#toolbar .toolbar-ct-1 .module:last-child, #toolbar .toolbar-ct-1 .B11-module:last-child {
+#toolbar .toolbar-ct-1 .module:last-child, #toolbar .toolbar-ct-1 .mr-module:last-child {
     margin-right: 0;
     padding-right: 0;
     border-right: 0
@@ -1521,14 +1766,14 @@ img {
     margin-right:10px;
 }
 
-#toolbar .toolbar-ct-2 .module, #toolbar .toolbar-ct-2 .B11-module {
+#toolbar .toolbar-ct-2 .module, #toolbar .toolbar-ct-2 .mr-module {
     margin-bottom: 0;
     display: inline-block;
     padding: 0 20px;
     border-right: 1px solid #555555
 }
 
-#toolbar .toolbar-ct-2 .module:last-child, #toolbar .toolbar-ct-2 .B11-module:last-child {
+#toolbar .toolbar-ct-2 .module:last-child, #toolbar .toolbar-ct-2 .mr-module:last-child {
     border: 0
 }
 #toolbar .toolbar-ct-3 {
@@ -1547,7 +1792,7 @@ img {
     color: #0885B1;
     font-family: 'Roboto Slab', Georgia, Times, serif
 }
-.B11-header {
+.mr-header {
     padding-top: 20px;
     padding-bottom: 20px;
     background: #c8161d;
@@ -1592,46 +1837,46 @@ img {
 .head-search form {
     margin: 0
 }
-.B11-sl {
+.mr-sl {
     padding-bottom: 60px;
     padding-top: 60px
 }
 
-.B11-sl-1 {
+.mr-sl-1 {
     padding-top: 30px;
     padding-bottom: 0;
     position: relative;
     z-index: 1
 }
 
-.B11-masstop {
+.mr-masstop {
     padding-top: 10px;
     position: relative;
     z-index: 1
 }
-.B11-footer:before, .B11-footer:after {
+.mr-footer:before, .mr-footer:after {
     content: " ";
     display: table
 }
 
-.B11-footer:after {
+.mr-footer:after {
     clear: both
 }
 
-.B11-footer small {
+.mr-footer small {
     display: block;
     font-size: 100%
 }
-.B11-copyright:before, .B11-copyright:after {
+.mr-copyright:before, .mr-copyright:after {
     content: " ";
     display: table
 }
 
-.B11-copyright:after {
+.mr-copyright:after {
     clear: both
 }
 
-.B11-copyright small {
+.mr-copyright small {
     margin-bottom: 5px
 }
 
@@ -1661,23 +1906,23 @@ img {
     .head-search form {
         float: none
     }
-    .B11-masstop {
+    .mr-masstop {
         padding-top: 0
     }
-    .B11-sl {
+    .mr-sl {
         padding-bottom: 20px;
         padding-top: 20px
     }
-    .B11-copyright {
+    .mr-copyright {
         padding: 20px 20px 40px
     }
 
-    .B11-copyright:before, .B11-copyright:after {
+    .mr-copyright:before, .mr-copyright:after {
         content: " ";
         display: table
     }
 
-    .B11-copyright:after {
+    .mr-copyright:after {
         clear: both
     }
 
@@ -1688,7 +1933,7 @@ img {
     }
 }
 @media (max-width: 767px) and (max-width: 768px) {
-    .B11-copyright {
+    .mr-copyright {
         text-align: center
     }
 }
@@ -1707,66 +1952,66 @@ img {
 html, body {
 }
 .fa {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 .pull-right {
     float: right
 }
-.B11-stack {
-	position: relative;
-	display: inline-block;
-	width: 2em;
-	height: 2em;
-	line-height: 2em;
-	vertical-align: middle
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle
 }
 
-.B11-stack-1x, .B11-stack-2x {
+.fa-stack-1x, .fa-stack-2x {
     position: absolute;
     left: 0;
     width: 100%;
     text-align: center
 }
-.B11-stack-2x {
+.fa-stack-2x {
     font-size: 2em
 }
-.B11-star:before {
+.fa-star:before {
     content: "\f005"
 }
-.B11-star-o:before {
+.fa-star-o:before {
     content: "\f006"
 }
-.B11-shopping-cart:before {
+.fa-shopping-cart:before {
     content: "\f07a"
 }
- .B11-phone:before {
+.fa-phone:before {
     content: "\f095"
 }
- .B11-cart1:before {
+.fa-cart1:before {
     content: "\f07a"
 }
-   @font-face {
-	font-family: 'FontAwesome';
-	src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
-	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0')
-		format('embedded-opentype'),
-		url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
-		url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
-		url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular')
-		format('svg');
-	font-weight: normal;
-	font-style: normal
-} 
-.B11-heart:before {
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0')
+    format('embedded-opentype'),
+    url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+    url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+    url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular')
+    format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+.fa-heart:before {
     content: "\f004"
 }
 /********tooltip***********/
- .tooltip-inner {
+.tooltip-inner {
     max-width: 200px;
     padding: 3px 8px;
     color: #ffffff;
@@ -1821,13 +2066,52 @@ html, body {
     margin-left: 3px;
     padding: 0 5px
 }
-
+/**********************左侧热门宠物*************************/
+.mr-mainbody {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important
+}
+.navbar-default .mr-megamenu .module .module-ct ul, .navbar-default .mr-megamenu .mr-module .module-ct ul {
+    margin: 0;
+    text-align: left;
+    border: 0
+}
+.mr-sidebar-left.mr-sidebar .mr-module {
+    margin-right: 15px;
+    border: 2px solid #E1DDDD;
+}
+.mr-sidebar-1 .mr-module .box-product > div:before, .mr-sidebar .mr-module .box-product > div:before, .mr-sidebar-1 .mr-module .box-product > div:after, .mr-sidebar .mr-module .box-product > div:after {
+    content: " ";
+    display: table
+}
+.mr-sidebar-1 .mr-module .box-product > div:after, .mr-sidebar .mr-module .box-product > div:after {
+    clear: both
+}
+.mr-sidebar-1 .mr-module .box-product > div .image, .mr-sidebar .mr-module .box-product > div .image {
+    float: left;
+    margin-right: 20px
+}
+.mr-sidebar-1 .mr-module .box-product > div, .mr-sidebar .mr-module .box-product > div {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px
+}
+.mr-content {
+    padding-left: 30px;
+    padding-right: 15px
+}
+/****************************************/
 .table-responsive {
     overflow-x: auto;
     min-height: 0.01%;
 }
 .table-bordered th, .table-bordered td {
-        border: 1px solid #ddd !important
+    border: 1px solid #ddd !important
 }
 .table {
     width: 100%;
@@ -1845,7 +2129,7 @@ html, body {
 
 .cart-total > div {
     padding: 0
-}  
+}
 
 .cart-total .table, .cart-total tbody tr td {
     border-top: 0px none;
@@ -1872,10 +2156,10 @@ html, body {
     color: #aaa;
     margin-left: 10px
 }
-/***************Login page Style*****************/
+/***************登录页面样式*****************/
 .form-group {
-margin-bottom: 20px;
-font-size: 18px;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 .form-horizontal .control-label, .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
     margin-top: 0;
@@ -1887,8 +2171,8 @@ font-size: 18px;
 }
 
 .form-horizontal .form-group {
-margin-left: -15px;
-margin-right: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 @media (min-width: 768px) {
     .form-horizontal .control-label {
@@ -1898,31 +2182,37 @@ margin-right: -15px;
     }
 }
 .login_h1{
-	color: #333333;marging:0px;background-color: #F2F2F2;padding:15px;font-size:20px;font-weight: bold;
+    color: #333333;marging:0px;background-color: #F2F2F2;padding:15px;font-size:20px;font-weight: bold;
 }
-/**************Registration page Style*************************************/
+/**************注册页面样式*************************************/
 input.required{
-	float: left;
+    float: left;
 }
 .star{
-	color:
+    color:
 }
-/******************search bar************************/
+/******************搜索栏用的样式************************/
 .search_box{width:438px;height:48px;line-height:48px;border:2px solid #c8161d; float:right;margin-top:22px; margin-right:80px;position:relative;}
 .search_box_img{width:auto; position:absolute; right:0px; top:0px; background-color:#fff;  border-left:2px solid #c8161d;}
 .search_box_img:hover{ background-color:#f2f2f2;}
 .search_box_img a:active{background:#f2f2f2;}
 .top-nav-search-input{line-height:18px; margin-left:10px; float:left;  border:0px; overflow:hidden; outline:none; font-family:"黑体"; margin-top:1px;width:235px; height:43px;
 
-padding:0px; }
+    padding:0px; }
 /***************************************************/
 .index_title{
-	color: #c8161d;
+    color: #c8161d;
     border-bottom: 3px solid #c8161d;
     padding: 8px 0px;
     font-size:15px;
 }
 .index_h3{
-	border-bottom: 1px solid #B3B3B3;
-	padding-bottom:9px;
+    border-bottom: 1px solid #B3B3B3;
+    padding-bottom:9px;
+}
+.img_checkcode{
+    border-top: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    border-bottom: 1px solid #B3B3B3;
+    float: left;
 }

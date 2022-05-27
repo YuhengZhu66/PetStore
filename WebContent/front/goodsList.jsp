@@ -2,7 +2,7 @@
 	pageEncoding="GBK"%>
 <%@ page import="java.sql.ResultSet"%>
 
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
 <%
 	String type = request.getParameter("type");
 	String typeName = "";
@@ -112,7 +112,7 @@
 															<div class="cart">
 																<button class="btn btn-primary btn-primary"
 																	type="button" data-toggle="tooltip"
-																	onclick='javascript:window.location.href="cart_add.jsp?goodID=<%=ID%>&num=1"; '
+																	onclick='javascript:window.location.href="${pageContext.request.contextPath}/shopcart/add.action?goodID=<%=ID%>&num=1"; '
 																	style="display: none; width: 33.3333%;"
 																	data-original-title="add to shopping cart">
 																	<i class="B11 B11-shopping-cart"></i>
@@ -146,6 +146,28 @@
 													}
 												}
 											%>
+										</div>
+										<div class="row pagination">
+											<table width="100%" border="0" cellspacing="0"
+												   cellpadding="0">
+												<tr>
+													<td height="30" align="right">pageIndex£º[<%=Page%>/<%=maxPage%>]&nbsp;
+														<%
+															if (Page > 1) {
+														%> <a href="goodsList.jsp?Page=1&type=<%=type%>">first page</a> <a
+																href="goodsList.jsp?Page=<%=Page - 1%>&type=<%=type%>">Page up</a>
+														<%
+															}
+															if (Page < maxPage) {
+														%> <a
+																href="goodsList.jsp?Page=<%=Page + 1%>&type=<%=type%>">next page</a>
+														<a href="goodsList.jsp?Page=<%=maxPage%>&type=<%=type%>">last page&nbsp;</a>
+														<%
+															}
+														%>
+													</td>
+												</tr>
+											</table>
 										</div>
 									</div>
 								</div>

@@ -20,12 +20,12 @@
 			<div id="B11-content" class="B11-content col-xs-12">
 				<div class="login-wrap" style="margin-bottom: 60px; margin-top: 50px">
 					<div style="max-width: 540px; margin: 0 auto;">
-						<a href="index.jsp" title="Click back to home page"><img src="images/xaw_b.png"></a>
+						<a href="index.jsp" title="Click back to home page"><img src="images/LOGO.png"></a>
 					</div>
 					<div class="login">
 						<div class="page-header" style="pause: 0px;"> <h1 class="login_h1">Member login</h1> </div>
 						<!--Member Login Form-->
-						<form action="login_check.jsp" method="post" class="form-horizontal">
+						<form action="${pageContext.request.contextPath}/user/login.action" method="post" class="form-horizontal">
 							<fieldset>
 								<div class="form-group">
 									<div class="col-sm-4 control-label">

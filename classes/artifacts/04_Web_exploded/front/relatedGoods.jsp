@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
 <%@ page import="java.sql.ResultSet"%>
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
 <%
 	int typeSystem = Integer.parseInt(request.getParameter("typeSystem"));
 
@@ -40,7 +40,7 @@
 					<div class="cart">
 						<button class="btn btn-primary btn-primary" type="button"
 							data-toggle="tooltip" title=""
-							onclick='javascript:window.location.href="cart_add.jsp?goodID=<%=relate_ID%>&num=1"; '
+							onclick='javascript:window.location.href="${pageContext.request.contextPath}/shopcart/add.action?goodID=<%=relate_ID%>&num=1"; '
 							data-original-title="add to shopping cart">
 							<i class="B11 B11-shopping-cart"></i>
 						</button>

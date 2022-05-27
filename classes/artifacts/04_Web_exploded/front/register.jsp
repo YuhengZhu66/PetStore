@@ -33,7 +33,7 @@
 							<h1 class="login_h1">member registration</h1>
 						</div>
 						<!-- register -->
-						<form id="member-registration" action="register_deal.jsp"
+						<form id="member-registration" action="${pageContext.request.contextPath}/user/register.action"
 							onsubmit="return regis();" method="post" class="form-horizontal">
 
 							<fieldset>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
 <%@ page import="java.sql.ResultSet"%>
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />	
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -136,7 +136,7 @@
 			alert('The quantity cannot be less than 1£¡');
 			return;
 		}
-		window.location.href = "cart_add.jsp?goodID=<%=ID%>&num=" + num;//Call the add shopping cart page to add the product to the shopping cart
+		window.location.href = "${pageContext.request.contextPath}/shopcart/add.action?goodID=<%=ID%>&num=" + num;//Call the add shopping cart page to add the product to the shopping cart
 		}
 	</script>
 </body>

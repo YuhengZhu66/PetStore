@@ -5,19 +5,19 @@
 <head>
 <style>
 	body{
-		margin:50px auto;  	/*设置外边距*/
-		text-align: center;	/*设置居中对齐*/
+		margin:50px auto;
+		text-align: center;
 	}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=GBK">
 <title>pet store————宠物商城</title>
 	<script type="text/javascript">
-			window.location.href="front/index.jsp"; 	//直接跳转到首页
+			window.location.href="front/index.jsp";
 	</script>
 </head>
 <body>
 欢迎访问pet store————宠物商城
-<br>	<!-- 换行 -->
-<img alt="网站正在建设中……" src="images/building.png">  <!-- 插入图片 -->
+<br>
+<img alt="Web site is under construction……" src="images/building.png">
 </body>
 </html>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
 <%@ page import="java.sql.ResultSet"%>
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
 <%
 	int hot_ID = 0;
 	String hot_goodName = "";
@@ -27,7 +27,7 @@
 	<div class="B11-module module " id="Mod157">
 		<div class="module-inner">
 			<h3 class="module-title "></h3>
-			<p style="text-align:center;font-family:Tahoma;color:red;font-size:30px;background-color: grey">Hot Product <img src="images/hot.jpg"><img src="images/hot.jpg"></p>
+			<p style="white-space: nowrap;text-align:center;font-family:Tahoma;color:red;font-size:30px;background-color: grey">Hot Product <img src="images/hot.jpg"><img src="images/hot.jpg"></p>
 			<div class="module-ct">
 				<div class="b11shop">
 					<div class="container_oc">

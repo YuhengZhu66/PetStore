@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
 <%@ page import="java.sql.ResultSet"%>
-<jsp:useBean id="conn" scope="page" class="com.tools.ConnDB" />
+<jsp:useBean id="conn" scope="page" class="com.example.shop.tools.ConnDB" />
 <%
 	/* New pet information on shelves */
 	ResultSet rs_new = conn.executeQuery("select top 12 t1.ID, t1.GoodName,t1.price,t1.picture,t2.TypeName "
@@ -40,14 +40,57 @@
     <script type="text/javascript" src="js/respond.min.js"></script>
     <![endif]-->
 
-	<script type="text/javascript" src="./js/jquery.1.3.2.js"></script>
-	<script type="text/javascript" src="./js/jquery.magnific-popup.min.js"></script>
+<%--	<script type="text/javascript" src="./js/jquery.1.3.2.js"></script>--%>
+<%--	<script type="text/javascript" src="./js/jquery.magnific-popup.min.js"></script>--%>
 </head>
 
 <body>
 	<jsp:include page="index_log-inCon.jsp" />
 	<%@ include file="general_header.jsp"%>
 
+	<div class="container mr-sl mr-sl-1">
+		<div class="mr-spotlight mr-spotlight-1  row">
+			<!-- 显示轮播广告 -->
+			<div
+					class=" col-lg-9 col-md-12  col-sm-3 hidden-sm   col-xs-6 hidden-xs " style="width: 100%;">
+				<div class="mr-module module " id="Mod159">
+					<div class="module-inner">
+						<div class="module-ct">
+							<div class="mijoshop">
+								<div class="container_oc">
+									<div class="slideshow">
+										<div id="slidershow" style="width: 100%;" class="nivoSlider">
+											<a href="#" class="nivo-imageLink" style="display: block;"><img
+													src="images/img1.png" class="img-responsive"
+													style="display: none;"> </a> <a href="#"
+																					class="nivo-imageLink" style="display: none;"> <img
+												src="images/img2.jpg" class="img-responsive"
+												style="display: none;">
+										</a> <a href="#" class="nivo-imageLink" style="display: none;">
+											<img src="images/img3.jpg" class="img-responsive"
+												 style="display: none;">
+										</a> <a href="#" class="nivo-imageLink" style="display: none;">
+											<img src="images/img4.jpg" class="img-responsive"
+												 style="display: none;">
+										</a>
+										</div>
+									</div>
+									<script type="text/javascript">
+										//实现调用幻灯片插件轮播广告
+
+										jQuery(document).ready(function() {
+											jQuery('#slidershow').nivoSlider();
+										});
+										//-->
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- NEW and SALE pet display -->
 	<nav class="container B11-masstop  hidden-sm hidden-xs">
@@ -87,7 +130,7 @@
 														<div class="cart">
 															<button class="btn btn-primary btn-primary" type="button"
 																data-toggle="tooltip"
-																onclick='javascript:window.location.href="cart_add.jsp?goodID=<%=new_ID%>&num=1"; '
+																onclick='javascript:window.location.href="${pageContext.request.contextPath}/shopcart/add.action?goodID=<%=new_ID%>&num=1"; '
 																style="display: none; width: 33.3333%;"
 																data-original-title="add to the shopping cart">
 																<i class="B11 B11-shopping-cart"></i>
@@ -142,7 +185,7 @@
 													<div class="cart">
 														<button class="btn btn-primary btn-primary" type="button"
 															data-toggle="tooltip"
-															onclick='javascript:window.location.href="cart_add.jsp?goodID=<%=sale_ID%>&num=1"; '
+															onclick='javascript:window.location.href="${pageContext.request.contextPath}/shopcart/add.action?goodID=<%=sale_ID%>&num=1"; '
 															style="display: none; width: 33.3333%;"
 															data-original-title="add to the shopping cart">
 															<i class="B11 B11-shopping-cart"></i>
